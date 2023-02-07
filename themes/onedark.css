@@ -1,0 +1,19 @@
+:root,
+*,
+#context-menu {
+	--text: #c4c9d4;
+	--subtext1: #b6c5e2;
+	--subtext0: #a6b3ce;
+	--overlay2: #95a2bb;
+	--overlay1: #828ea6;
+	--overlay0: #757f95;
+	--surface2: #626b7f;
+	--surface1: #4c5567;
+	--surface0: #383e4d;
+	--base: #2c313a;
+	--mantle: #282c34;
+	--crust: #282c34;
+	--shadow: #010409;
+	color-scheme: dark;
+}
+
