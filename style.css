@@ -1,18 +1,18 @@
 :root,
 *,
 #context-menu {
-	--text: #c1c2c5;
+	--text: #c4c9d4;
 	--subtext1: #b6c5e2;
 	--subtext0: #a6b3ce;
 	--overlay2: #95a2bb;
 	--overlay1: #828ea6;
 	--overlay0: #757f95;
 	--surface2: #626b7f;
-	--surface1: #505a6d;
-	--surface0: #373a40;
-	--base: #2c2e33;
-	--mantle: #25262b;
-	--crust: #1a1b1e;
+	--surface1: #4c5567;
+	--surface0: #383e4d;
+	--base: #2c313a;
+	--mantle: #282c34;
+	--crust: #282c34;
 	--shadow: #010409;
 	color-scheme: dark;
 }
@@ -722,13 +722,13 @@ button#modelmerger_merge {
 .progressDiv {
 	position: relative;
 	height: 2rem;
-	background: var(--surface0);
+	background: var(--surface1);
 	border-radius: 0.5rem !important;
-	margin-bottom: -3px;
+	margin-bottom: 0;
 }
 
 .dark .progressDiv {
-	background: var(--surface0);
+	background: var(--surface1);
 }
 
 .progressDiv .progress {
