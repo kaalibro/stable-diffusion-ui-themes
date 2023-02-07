@@ -703,13 +703,13 @@ button#modelmerger_merge {
 .progressDiv {
 	position: relative;
 	height: 2rem;
-	background: var(--surface0);
+	background: var(--surface1);
 	border-radius: 0.5rem !important;
-	margin-bottom: -3px;
+	margin-bottom: 0;
 }
 
 .dark .progressDiv {
-	background: var(--surface0);
+	background: var(--surface1);
 }
 
 .progressDiv .progress {
