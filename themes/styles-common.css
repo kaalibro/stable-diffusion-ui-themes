@@ -726,3 +726,7 @@ button#modelmerger_merge {
 	overflow: visible;
 	white-space: nowrap;
 }
+
+#tabs_extensions > div.tabitem {
+	border: none;
+}
