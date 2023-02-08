@@ -751,8 +751,13 @@ button#modelmerger_merge {
 	border-radius: 0.5rem !important;
 }
 
-#tabs_extensions > div.tabitem {
+#tabs_extensions > div.tabitem,
+#train_tabs > div.tabitem {
 	border: none;
+}
+
+#train_tabs {
+	gap: 1rem;
 }
 
 .cursor-pointer > * {
