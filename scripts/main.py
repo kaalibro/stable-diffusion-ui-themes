@@ -30,7 +30,7 @@ def on_ui_settings():
     shared.opts.add_option(
         "uit_theme",
         shared.OptionInfo(
-            default="Mocha",
+            default="Civitai",
             label="Theme",
             component=gr.Radio,
             component_args={"choices": themes},

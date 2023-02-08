@@ -8,11 +8,11 @@
 	--overlay1: #8c8fa1;
 	--overlay0: #9ca0b0;
 	--surface2: #acb0be;
-	--surface1: #bcc0cc;
-	--surface0: #ccd0da;
+	--surface1: #c5c9d3;
+	--surface0: #dfe3ec;
 	--base: #eff1f5;
-	--mantle: #e6e9ef;
-	--crust: #dce0e8;
+	--mantle: #e9ecf1;
+	--crust: #e0e4eb;
 	--shadow: #252632;
 	color-scheme: light;
 }

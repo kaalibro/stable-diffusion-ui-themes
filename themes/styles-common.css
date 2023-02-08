@@ -18,6 +18,11 @@
 	--accent: var(--blue);
 }
 
+::selection {
+	background-color: var(--subtext0);
+	color: var(--base);
+}
+
 select,
 option {
 	background-color: var(--base);
@@ -97,6 +102,14 @@ textarea,
 .dark .gr-input,
 .gr-input {
 	border-color: var(--surface0);
+	box-shadow: 0 0 0 1px transparent;
+	transition: border-color, box-shadow 0.2s ease;
+}
+
+.dark .gr-input:focus,
+.gr-input:focus {
+	border-color: var(--surface1);
+	box-shadow: 0 0 0 1px var(--surface1);
 }
 
 .dark .gr-form,
@@ -109,16 +122,25 @@ textarea,
 
 .dark .gr-check-radio,
 .gr-check-radio {
+	border-color: var(--surface1);
 	background-color: var(--base);
+	transition: background-color, box-shadow 0.2s ease;
 }
 
 .dark .gr-check-radio:focus,
 .gr-check-radio:focus {
 	background-color: transparent;
+	box-shadow: 0 0 0 3px var(--surface1);
 }
 
 .dark .gr-check-radio:checked,
-.gr-check-radio:checked {
+.gr-check-radio:checked,
+.dark .gr-check-radio:checked:hover,
+.gr-check-radio:checked:hover,
+.dark .gr-check-radio:checked:focus,
+.gr-check-radio:checked:focus,
+.dark .gr-check-radio:checked:focus:hover,
+.gr-check-radio:checked:focus:hover {
 	background-color: var(--accent);
 }
 
@@ -129,7 +151,7 @@ textarea,
 
 .dark .gr-button-primary:hover,
 .gr-button-primary:hover {
-	filter: brightness(130%);
+	filter: brightness(120%);
 }
 
 .dark .gr-button-primary,
@@ -145,14 +167,16 @@ textarea,
 
 .dark .gr-button-secondary:hover,
 .gr-button-secondary:hover {
-	filter: brightness(120%);
+	filter: brightness(110%);
 }
 
-.dark .hover\:text-gray-700 {
+.dark .hover\:text-gray-700,
+.hover\:text-gray-700 {
 	transition: color 0.2s ease;
 }
 
-.dark .hover\:text-gray-700:hover {
+.dark .hover\:text-gray-700:hover,
+.hover\:text-gray-700:hover {
 	color: var(--accent);
 }
 
@@ -171,6 +195,15 @@ textarea {
 	--tw-gradient-stops: none;
 	background-color: var(--base);
 	color: var(--text);
+	transition: background-color 0.2 ease;
+}
+
+.dark .gr-input-label:hover,
+.gr-input-label:hover {
+	--tw-gradient-from: none;
+	--tw-gradient-to: none;
+	--tw-gradient-stops: none;
+	background-color: var(--surface0);
 }
 
 .dark .gr-button.gr-button-secondary,
@@ -275,7 +308,6 @@ textarea {
 	margin: unset;
 }
 
-.boder,
 .dark .border,
 .border,
 .dark .border-gray-100,
@@ -443,14 +475,29 @@ input[type='number'] {
 	width: 4em;
 }
 
-.progressDiv .progress {
-	background: var(--accent);
-	color: var(--shadow);
-}
-
 .dark .progressDiv,
 .progressDiv {
-	background-color: var(--surface0);
+	position: relative;
+	height: 2rem;
+	background: var(--surface1);
+	border-radius: 0.5rem !important;
+	margin-bottom: 0;
+}
+
+.dark .progressDiv .progress,
+.progressDiv .progress {
+	width: 0%;
+	height: 2rem;
+	background: var(--accent);
+	color: var(--shadow);
+	font-weight: normal;
+	font-size: 0.95rem;
+	line-height: 2rem;
+	padding: 0 1rem;
+	text-align: left;
+	border-radius: 0.5rem;
+	overflow: visible;
+	white-space: nowrap;
 }
 
 input[type='range'] {
@@ -656,6 +703,10 @@ input[type='range']:disabled::-moz-range-thumb {
 	border-radius: 0.5rem;
 }
 
+div[data-testid='image'].bg-gray-200 {
+	background-color: var(--surface0);
+}
+
 #extras_single_tab,
 #extras_batch_process_tab,
 #extras_batch_directory_tab {
@@ -700,33 +751,10 @@ button#modelmerger_merge {
 	border-radius: 0.5rem !important;
 }
 
-.progressDiv {
-	position: relative;
-	height: 2rem;
-	background: var(--surface1);
-	border-radius: 0.5rem !important;
-	margin-bottom: 0;
-}
-
-.dark .progressDiv {
-	background: var(--surface1);
-}
-
-.progressDiv .progress {
-	width: 0%;
-	height: 2rem;
-	background: var(--accent);
-	color: var(--shadow);
-	font-weight: normal;
-	font-size: 0.95rem;
-	line-height: 2rem;
-	padding: 0 1rem;
-	text-align: left;
-	border-radius: 0.5rem;
-	overflow: visible;
-	white-space: nowrap;
-}
-
 #tabs_extensions > div.tabitem {
 	border: none;
+}
+
+.cursor-pointer > * {
+	cursor: pointer;
 }
