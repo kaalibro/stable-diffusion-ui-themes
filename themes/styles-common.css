@@ -30,6 +30,7 @@ option {
 
 #setting_sd_model_checkpoint > :first-child {
 	background-color: var(--base);
+	border-radius: 0.5rem;
 }
 
 #txt2img_prompt_container,
@@ -39,8 +40,13 @@ option {
 
 #quicksettings > div,
 #quicksettings > fieldset {
-	max-width: 50em;
+	max-width: 32em;
 	min-width: 24em;
+}
+
+#quicksettings > div:not(:first-child),
+#quicksettings > fieldset:not(:first-child) {
+	margin-left: 1.5rem;
 }
 
 .dark .bg-white\/90,
@@ -437,6 +443,10 @@ label.block span {
 	background-color: transparent;
 }
 
+#quicksettings.flex {
+	align-items: center;
+}
+
 input[type='range']::-ms-track {
 	background: transparent;
 }
@@ -769,3 +779,13 @@ button#modelmerger_merge {
 .cursor-pointer > * {
 	cursor: pointer;
 }
+
+.eta-bar {
+	background-color: var(--surface1) !important;
+	border-radius: 0.5rem;
+}
+
+div.meta-text {
+	display: block !important;
+}
+
