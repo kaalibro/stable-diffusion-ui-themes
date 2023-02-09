@@ -1,18 +1,18 @@
 :root,
 *,
 #context-menu {
-	--text: #c4c9d4;
+	--text: #c1c2c5;
 	--subtext1: #b6c5e2;
 	--subtext0: #a6b3ce;
 	--overlay2: #95a2bb;
 	--overlay1: #828ea6;
 	--overlay0: #757f95;
 	--surface2: #626b7f;
-	--surface1: #4c5567;
-	--surface0: #353946;
-	--base: #2c313a;
-	--mantle: #282c34;
-	--crust: #282c34;
+	--surface1: #505a6d;
+	--surface0: #373a40;
+	--base: #2c2e33;
+	--mantle: #25262b;
+	--crust: #1a1b1e;
 	--shadow: #010409;
 	color-scheme: dark;
 }
@@ -34,7 +34,7 @@
 	--sapphire: #85c1dc;
 	--blue: #8caaee;
 	--lavender: #babbf1;
-	--accent: var(--teal);
+	--accent: var(--sapphire);
 }
 
 ::selection {
@@ -49,6 +49,7 @@ option {
 
 #setting_sd_model_checkpoint > :first-child {
 	background-color: var(--base);
+	border-radius: 0.5rem;
 }
 
 #txt2img_prompt_container,
@@ -58,8 +59,13 @@ option {
 
 #quicksettings > div,
 #quicksettings > fieldset {
-	max-width: 50em;
+	max-width: 32em;
 	min-width: 24em;
+}
+
+#quicksettings > div:not(:first-child),
+#quicksettings > fieldset:not(:first-child) {
+	margin-left: 1.5rem;
 }
 
 .dark .bg-white\/90,
@@ -281,10 +287,6 @@ textarea {
 	border-color: var(--surface0);
 }
 
-#img2img_settings {
-	border-radius: 10px;
-}
-
 #mode_img2img > :not(:first-child) {
 	border-width: 0px;
 }
@@ -320,11 +322,22 @@ textarea {
 }
 
 #txt2img_script_container > div > div {
-	margin: 0px 1vh 0.9vw 1vh;
+	/* margin: 0px 1vh 0.9vw 1vh; */
+	margin: 0;
 }
 
 #txt2img_script_container:last-child > div {
 	margin: unset;
+	margin-top: 1rem;
+}
+
+#axis_options,
+#swap_axes {
+	gap: 1rem;
+}
+
+#swap_axes {
+	padding: 0 0.75rem;
 }
 
 .dark .border,
@@ -382,7 +395,8 @@ label.block span {
 }
 
 #txt2img_settings > div {
-	margin-top: 2vh;
+	/* margin-top: 2vh; */
+	margin-top: 1rem;
 	flex-grow: 0;
 	min-width: 30%;
 }
@@ -456,6 +470,10 @@ label.block span {
 	background-color: transparent;
 }
 
+#quicksettings.flex {
+	align-items: center;
+}
+
 input[type='range']::-ms-track {
 	background: transparent;
 }
@@ -495,7 +513,7 @@ input::-webkit-inner-spin-button {
 	right: 1em;
 	top: -0.6em;
 	padding: 0.625rem 0.2rem 0.625rem 1.1rem;
-	width: 5em;
+	width: 6.5em;
 	height: 2em;
 	z-index: 400;
 }
@@ -721,11 +739,16 @@ input[type='range']:disabled::-moz-range-thumb {
 #img_inpaint_mask > div[data-testid='image'],
 #extras_image > div[data-testid='image'],
 #extras_image_batch > div.cursor-pointer,
+#script_txt2txt_prompts_from_file_or_textbox_file > div.cursor-pointer,
 #pnginfo_image > div[data-testid='image'] {
 	border-style: dashed;
 	border-width: 2px;
 	border-color: var(--surface1);
 	border-radius: 0.5rem;
+}
+
+#script_txt2txt_prompts_from_file_or_textbox_file {
+	padding: 0 0.75rem;
 }
 
 div[data-testid='image'].bg-gray-200 {
@@ -788,3 +811,30 @@ button#modelmerger_merge {
 .cursor-pointer > * {
 	cursor: pointer;
 }
+
+.eta-bar {
+	background-color: var(--surface1) !important;
+	border-radius: 0.5rem;
+}
+
+div.meta-text {
+	display: block !important;
+}
+
+#txt2img_settings,
+#tab_modelmerger > * > div .gap-4.gr-compact {
+	padding-top: 1.16em;
+	padding-bottom: 0.9em;
+	margin: 0 0.75rem 0.75rem;
+}
+
+#img2img_settings,
+#tab_extras > * > div .gap-4.gr-compact {
+	padding-bottom: 0.9em;
+	margin: 0 0.75rem 0.75rem;
+}
+
+#tab_ti {
+	padding: 1.16em 1.25rem 1.25rem;
+}
+
