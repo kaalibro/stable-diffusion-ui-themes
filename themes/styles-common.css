@@ -39,7 +39,7 @@ option {
 
 #quicksettings > div,
 #quicksettings > fieldset {
-	max-width: 32em;
+	max-width: 50em;
 	min-width: 24em;
 }
 
@@ -460,19 +460,25 @@ input[type='range']:focus::-ms-fill-upper {
 }
 
 /* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
+/* input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
-}
+} */
 
 /* Firefox */
-input[type='number'] {
+/* input[type='number'] {
 	-moz-appearance: textfield;
-}
+} */
 
 .gr-box > div > div > input.gr-text-input {
-	width: 4em;
+	position: absolute;
+	right: 1em;
+	top: -0.6em;
+	padding: 0.625rem 0.2rem 0.625rem 1.1rem;
+	width: 5em;
+	height: 2em;
+	z-index: 400;
 }
 
 .dark .progressDiv,

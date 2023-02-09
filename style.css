@@ -1,18 +1,18 @@
 :root,
 *,
 #context-menu {
-	--text: #c1c2c5;
+	--text: #c4c9d4;
 	--subtext1: #b6c5e2;
 	--subtext0: #a6b3ce;
 	--overlay2: #95a2bb;
 	--overlay1: #828ea6;
 	--overlay0: #757f95;
 	--surface2: #626b7f;
-	--surface1: #505a6d;
-	--surface0: #373a40;
-	--base: #2c2e33;
-	--mantle: #25262b;
-	--crust: #1a1b1e;
+	--surface1: #4c5567;
+	--surface0: #353946;
+	--base: #2c313a;
+	--mantle: #282c34;
+	--crust: #282c34;
 	--shadow: #010409;
 	color-scheme: dark;
 }
@@ -34,7 +34,7 @@
 	--sapphire: #85c1dc;
 	--blue: #8caaee;
 	--lavender: #babbf1;
-	--accent: var(--blue);
+	--accent: var(--teal);
 }
 
 ::selection {
@@ -58,7 +58,7 @@ option {
 
 #quicksettings > div,
 #quicksettings > fieldset {
-	max-width: 32em;
+	max-width: 50em;
 	min-width: 24em;
 }
 
@@ -479,19 +479,25 @@ input[type='range']:focus::-ms-fill-upper {
 }
 
 /* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
+/* input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
-}
+} */
 
 /* Firefox */
-input[type='number'] {
+/* input[type='number'] {
 	-moz-appearance: textfield;
-}
+} */
 
 .gr-box > div > div > input.gr-text-input {
-	width: 4em;
+	position: absolute;
+	right: 1em;
+	top: -0.6em;
+	padding: 0.625rem 0.2rem 0.625rem 1.1rem;
+	width: 5em;
+	height: 2em;
+	z-index: 400;
 }
 
 .dark .progressDiv,
@@ -770,8 +776,13 @@ button#modelmerger_merge {
 	border-radius: 0.5rem !important;
 }
 
-#tabs_extensions > div.tabitem {
+#tabs_extensions > div.tabitem,
+#train_tabs > div.tabitem {
 	border: none;
+}
+
+#train_tabs {
+	gap: 1rem;
 }
 
 .cursor-pointer > * {

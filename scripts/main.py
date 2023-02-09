@@ -42,7 +42,7 @@ def on_ui_settings():
     shared.opts.add_option(
         "accent_color",
         shared.OptionInfo(
-            default="blue",
+            default="sapphire",
             label="Accent",
             component=gr.Radio,
             component_args={"choices": accents},
