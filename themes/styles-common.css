@@ -819,3 +819,7 @@ div.meta-text {
 	padding: 1.16em 1.25rem 1.25rem;
 }
 
+#tab_pnginfo .output-html > div > p > br {
+	margin-bottom: 1rem;
+}
+
