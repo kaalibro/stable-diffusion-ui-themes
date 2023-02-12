@@ -28,6 +28,32 @@ option {
 	background-color: var(--base);
 }
 
+#quicksettings {
+	background-color: transparent;
+}
+
+#quicksettings.flex {
+	/* width: auto; */
+	width: min-content;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+#quicksettings > div,
+#quicksettings > fieldset {
+	max-width: 24em;
+	min-width: 14em;
+}
+
+#quicksettings > div:not(:first-child),
+#quicksettings > fieldset:not(:first-child) {
+	margin-left: 1.5rem;
+}
+
+#quicksettings > #setting_sd_model_checkpoint {
+	min-width: 24em;
+}
+
 #setting_sd_model_checkpoint > :first-child {
 	background-color: var(--base);
 	border-radius: 0.5rem;
@@ -36,17 +62,6 @@ option {
 #txt2img_prompt_container,
 #img2img_prompt_container {
 	background-color: var(--mantle);
-}
-
-#quicksettings > div,
-#quicksettings > fieldset {
-	max-width: 32em;
-	min-width: 24em;
-}
-
-#quicksettings > div:not(:first-child),
-#quicksettings > fieldset:not(:first-child) {
-	margin-left: 1.5rem;
 }
 
 .dark .bg-white\/90,
@@ -445,14 +460,6 @@ label.block span {
 	border-color: var(--surface0);
 	border-width: 0px;
 	border-bottom-width: 0px;
-}
-
-#quicksettings {
-	background-color: transparent;
-}
-
-#quicksettings.flex {
-	align-items: center;
 }
 
 input[type='range']::-ms-track {
