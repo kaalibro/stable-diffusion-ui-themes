@@ -97,6 +97,16 @@ label.block span {
 	border: transparent;
 }
 
+fieldset span.text-gray-500,
+.gr-block.gr-box span.text-gray-500,
+label.block span {
+	top: -0.9em;
+	line-height: 1.4em;
+	padding: 0 0.5em;
+	margin: 0;
+	border-radius: 0.5rem;
+}
+
 .dark .dark\:text-gray-200,
 .\:text-gray-200 {
 	color: var(--text);
